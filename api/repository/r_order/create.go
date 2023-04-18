@@ -11,5 +11,5 @@ func (r OrderRepo) CreateRepo(req models.Order) (res models.Order, err error) {
 		"Quantity",
 		"Price",
 	).Create(&req).Error
-	return res, err
+	return req, err
 }

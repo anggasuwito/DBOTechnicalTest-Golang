@@ -3,6 +3,7 @@ package uc_customer
 import (
 	"DBOTechnicalTest-Golang/api/models"
 	"errors"
+	"github.com/jinzhu/gorm"
 )
 
 func (uc CustomerUC) UpdateUC(req models.Customer) (res models.Customer, err error) {
@@ -15,7 +16,7 @@ func (uc CustomerUC) UpdateUC(req models.Customer) (res models.Customer, err err
 	}
 
 	existingCustomer, err := uc.Repo.CustomerRepo.GetByEmailRepo(req.Email)
-	if err != nil {
+	if err != nil && err != gorm.ErrRecordNotFound {
 		return res, err
 	}
 	if existingCustomer.ID != 0 {

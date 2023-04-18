@@ -3,7 +3,7 @@ package models
 import "DBOTechnicalTest-Golang/helper/pagination"
 
 func (Order) TableName() string {
-	return "order"
+	return "orders"
 }
 
 type Order struct {

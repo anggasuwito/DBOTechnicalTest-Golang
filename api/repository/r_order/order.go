@@ -13,7 +13,7 @@ type OrderRepoInterface interface {
 	CreateRepo(req models.Order) (res models.Order, err error)
 	DeleteRepo(id int) (err error)
 	UpdateRepo(req models.Order) (err error)
-	CountAllRepo() (res int, err error)
+	CountAllRepo(param models.OrderParam) (res int, err error)
 	GetAllRepo(offset int, limit int, param models.OrderParam) (res []models.Order, err error)
 	GetByIDRepo(id int) (res models.Order, err error)
 }

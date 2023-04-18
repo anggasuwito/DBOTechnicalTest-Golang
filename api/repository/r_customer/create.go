@@ -11,5 +11,5 @@ func (r CustomerRepo) CreateRepo(req models.Customer) (res models.Customer, err 
 		"Password",
 		"Address",
 	).Create(&req).Error
-	return res, err
+	return req, err
 }

@@ -16,6 +16,6 @@ func (uc OrderUC) DeleteUC(id string) (res models.Order, err error) {
 		return res, errors.New("order not found")
 	}
 
-	err = uc.Repo.CustomerRepo.DeleteRepo(numID)
+	err = uc.Repo.OrderRepo.DeleteRepo(numID)
 	return res, err
 }

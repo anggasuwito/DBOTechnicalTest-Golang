@@ -13,7 +13,7 @@ type CustomerRepoInterface interface {
 	CreateRepo(req models.Customer) (res models.Customer, err error)
 	DeleteRepo(id int) (err error)
 	UpdateRepo(req models.Customer) (err error)
-	CountAllRepo() (res int, err error)
+	CountAllRepo(param models.CustomerParam) (res int, err error)
 	GetAllRepo(offset int, limit int, param models.CustomerParam) (res []models.Customer, err error)
 	GetByIDRepo(id int) (res models.Customer, err error)
 	GetByEmailRepo(email string) (res models.Customer, err error)

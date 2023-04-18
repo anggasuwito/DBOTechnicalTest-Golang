@@ -12,7 +12,7 @@ func (uc OrderUC) GetAllUC(param models.OrderParam) (res []models.Order, meta pa
 		return res, meta, err
 	}
 
-	total, err := uc.Repo.OrderRepo.CountAllRepo()
+	total, err := uc.Repo.OrderRepo.CountAllRepo(param)
 	if err != nil {
 		return res, meta, err
 	}

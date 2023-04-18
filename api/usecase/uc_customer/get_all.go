@@ -16,7 +16,7 @@ func (uc CustomerUC) GetAllUC(param models.CustomerParam) (res []models.Customer
 		res[i].Password = ""
 	}
 
-	total, err := uc.Repo.CustomerRepo.CountAllRepo()
+	total, err := uc.Repo.CustomerRepo.CountAllRepo(param)
 	if err != nil {
 		return res, meta, err
 	}

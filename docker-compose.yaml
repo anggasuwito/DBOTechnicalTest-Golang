@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dbo-golang:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: dbo-golang
+    image: dbo-golang
+    restart: always
+    ports:
+      # expose 8008 listen 8008
+      - "8008:8008"

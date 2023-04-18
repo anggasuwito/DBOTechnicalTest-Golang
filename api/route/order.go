@@ -13,5 +13,5 @@ func Order(r *gin.RouterGroup, c controller.Controller) {
 	orderAPI.GET("/all", c.OrderController.GetAll)
 	orderAPI.GET("/:id", c.OrderController.GetByID)
 	orderAPI.PUT("", c.OrderController.Update)
-	orderAPI.DELETE("", c.OrderController.Delete)
+	orderAPI.DELETE("/:id", c.OrderController.Delete)
 }
